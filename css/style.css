@@ -142,6 +142,21 @@ body {
 .fixed-background h3{
   text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1);    /*Visibility*/
 }
+
+/*============= GOOGLE MAPS ON CONTACT FORM ========*/
+.map-container-6{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container-6 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
 /*============= FOOTER =============*/
 footer {
   background-color: #383838;
