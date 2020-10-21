@@ -31,6 +31,7 @@ body {
   text-align: center;
   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
   z-index: 1; /*Drop shadow on top of slide content*/
+  /*margin-bottom: 0!important; */
 }
 /*Buttons*/
 .nav-item {
@@ -157,6 +158,46 @@ body {
   width:100%;
   position:absolute;
   }
+
+/*============= JOB SECTION BLOG STYLING ========*/
+.main-row {
+  margin: 8%;
+  background-color: white;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);    /*Matching the rest*/
+  border-radius: 1rem;
+}
+.blog-img>img {
+  width: 100%;
+  height: 100%;
+  transform: translateY(-30px);
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.3);
+}
+.blog-date span {
+  color: #962c51;
+}
+.listShort{
+  justify-content: center;
+  text-align: center;
+}
+.blog-title>h2 {
+  font-style: normal;
+  font-weight: 400;
+}
+.blog-desc>p {
+  font-style: normal;
+  line-height: 2;
+}
+/*============JOB SECTION DROPDOWN STYLING============*/
+.listInner {
+  list-style-type: circle!important;
+  color: #73b21c;
+}
+.listInner span {
+  color: #616971;     /*Green Circle - Grey text*/
+}
+
 /*============= FOOTER =============*/
 footer {
   background-color: #383838;
