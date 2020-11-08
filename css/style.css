@@ -236,6 +236,16 @@ footer .svg-inline--fa:hover{
   border-top: .1rem solid #85cc21;
 }
 
+/*============= PRIVACY POLICY MODAL =============*/
+.privacyNotice .modal-dialog{
+    overflow-y: initial!important
+}
+.privacyNotice .modal-body{
+    height: 50vh;
+    overflow-y: auto;
+    font-size: 0.8rem!important;
+}
+
 /*============= MEDIA QUERIES =============*/
 
 /* Devices under 1199px (xl) */
