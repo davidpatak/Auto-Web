@@ -91,40 +91,40 @@
 						</div>
 						<!-- Main Form-->
 						<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-							<form action="">
+							<form class="contact-form" action="php/contactform.php" method="post">
 								<label>Hogyan szólíthatjuk?</label>
 								<div class="form-row">									
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="text" class="form-control" placeholder="Vezetéknév" required>
+										<input type="text" name="vezNev" class="form-control" placeholder="Vezetéknév" required>
 									</div>
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="text" class="form-control" placeholder="Keresztnév" required>
+										<input type="text" name="kerNev" class="form-control" placeholder="Keresztnév" required>
 									</div>
 								</div>
 								<label>Ön elérhetőségei (e-mail és telefonszám)?</label>
 								<div class="form-row">
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="Email" class="form-control" placeholder="pelda@pelda.hu" required>
+										<input type="Email" name="mail" class="form-control" placeholder="pelda@pelda.hu" required>
 									</div>
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="tel" class="form-control" placeholder="Tel.: +36-821-848" required>
+										<input type="tel" name="tel" class="form-control" placeholder="Tel.: +36-821-848" required>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="selectPrimary">Miben segíthetünk önnek?</label>
-									<select id="selectPrimary" class="form-control">
-										<option hidden>Válasszon az alábbiak közül</option>
-										<option>Szakszervíz</option>
-										<option>Új autó vásárlása</option>
-										<option>Használt autó árajánlat</option>
-										<option>Alkatrész beszerzése</option>
-										<option>Forgalmi vizsgáztatás</option>
-										<option>Vontatás</option>
-										<option>Egyéb...</option>
+									<select id="selectPrimary" name="selectPrimary" class="form-control">
+										<option value="Üresen hagyva" hidden>Válasszon az alábbiak közül</option>
+										<option value="Szakszervíz">Szakszervíz</option>
+										<option value="Új autó vásárlása">Új autó vásárlása</option>
+										<option value="Használt autó árajánlat">Használt autó árajánlat</option>
+										<option value="Alkatrész beszerzése">Alkatrész beszerzése</option>
+										<option value="Forgalmi vizsgáztatás">Forgalmi vizsgáztatás</option>
+										<option value="Vontatás">Vontatás</option>
+										<option value="Egyéb...">Egyéb...</option>
 									</select>
 								</div>
 								<label>Az ön üzenete számunkra</label>
-								<textarea type="text" class="form-control mb-3" cols="10" rows="5" id="comment"placeholder="..."></textarea>
+								<textarea type="text" name="msgMain" class="form-control mb-3" cols="10" rows="5" id="comment"placeholder="..."></textarea>
 									<div class="checkbox">
 										<label style="font-size:0.7rem"><input type="checkbox"> Hozzájárulok ahhoz, hogy az általam megadott személyes és nem személyes adatok a FOKSZ-AUTO az <a data-toggle="modal" data-target=".privacyNotice" href="#privacyNotice" style="color:#73b21c">Adatvédelemi nyilatkozatunk</a> alapján automatikusan feldolgozásra kerülhetnek. Az adatok kizárólag a kérdések megválaszolása céljából kerülnek mentésre és harmadik félnek nem adjuk át.</label>
 										<div class="modal fade privacyNotice" tabindex="-1" role="dialog" aria-labelledby="privacyNoticeLabel" aria-hidden="true">
@@ -214,7 +214,7 @@
 											</div>
 										  </div>										  
 									</div>
-								<button class="btn btn-primary float-right">Elküldés</button>
+								<button class="btn btn-primary float-right" type="submit" name="submit">Elküldés</button>
 							</form>
 						</div>
 					</div>
