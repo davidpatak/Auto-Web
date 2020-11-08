@@ -104,10 +104,10 @@
 								<label>Ön elérhetőségei (e-mail és telefonszám)?</label>
 								<div class="form-row">
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="Email" name="mail" class="form-control" placeholder="pelda@pelda.hu" required>
+										<input type="Email" name="mail" class="form-control" placeholder="pelda@pelda.hu" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 									</div>
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="tel" name="tel" class="form-control" placeholder="Tel.: +36-821-848" required>
+										<input type="tel" name="tel" class="form-control" placeholder="Tel.: +36-821-8482" pattern="\++[0-9]{2,3}-[0-9]{3}-[0-9]{4,}" title="+36-821-8482" required>
 									</div>
 								</div>
 								<div class="form-group">
@@ -124,7 +124,7 @@
 									</select>
 								</div>
 								<label>Az ön üzenete számunkra</label>
-								<textarea type="text" name="msgMain" class="form-control mb-3" cols="10" rows="5" id="comment"placeholder="..."></textarea>
+								<textarea type="text" name="msgMain" class="form-control mb-3" cols="10" rows="5" id="comment" placeholder="..." required></textarea>
 									<div class="checkbox">
 										<label style="font-size:0.7rem"><input type="checkbox"> Hozzájárulok ahhoz, hogy az általam megadott személyes és nem személyes adatok a FOKSZ-AUTO az <a data-toggle="modal" data-target=".privacyNotice" href="#privacyNotice" style="color:#73b21c">Adatvédelemi nyilatkozatunk</a> alapján automatikusan feldolgozásra kerülhetnek. Az adatok kizárólag a kérdések megválaszolása céljából kerülnek mentésre és harmadik félnek nem adjuk át.</label>
 										<div class="modal fade privacyNotice" tabindex="-1" role="dialog" aria-labelledby="privacyNoticeLabel" aria-hidden="true">
