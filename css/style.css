@@ -246,6 +246,21 @@ footer .svg-inline--fa:hover{
     font-size: 0.8rem!important;
 }
 
+/*============= OPENING HOURS TABLE =============*/
+.table-dark{
+  background-color: #383838!important /*table background = footer background*/
+}
+.openinghours-table td {
+  padding: 0.25rem;
+}
+.openinghours-table th {
+  padding: 0.25rem;
+}
+.openinghours-table .current-day {
+  background-color:  #85cc21;
+  color: white;
+}
+
 /*============= MEDIA QUERIES =============*/
 
 /* Devices under 1199px (xl) */

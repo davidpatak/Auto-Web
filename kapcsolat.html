@@ -13,7 +13,7 @@
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body onload="dayHighlight()">
 
 	<!-- Top Bar telefonszam + nyitvatartas -->
 	<div class="top-bar">
@@ -25,7 +25,7 @@
 	</div>
 	<!-- End Top Bar -->
 
-	<!-- Navigation -->
+	<!-- Start Navigation -->
 	<nav class="navbar bg-light navbar-light navbar-expand-lg">
 		<div class="container">
 			<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="FOKSZ-AUTO KFT." title="FOKSZ-AUTO"></a>
@@ -52,9 +52,9 @@
 	</nav>
 	<!-- End Navigation -->
 
-	<!-- Contact Form Start-->
+	<!-- Start Contact Form-->
 	<!-- Main Section Side Information-->
-	<section class="head pb5">
+	<section class="head pb-1">
 		<div class="container py-5">
 			<div class="card">
 				<div class="card-body">
@@ -224,7 +224,69 @@
 	</section>
 	<!-- End Contact Form-->
 
-	
+	<!-- Start Opening Hours-->
+	<section class="head pb-5">
+		<div class="container">
+			<div class="card">
+				<div class="card-body">
+					<h1 class="font-weight-light text-center py-3">Nyitvatartási idő</h1>
+					<div id="openingHours" class="table-responsive">
+						<table class="openinghours-table table text-center">
+							<thead>
+								<tr>
+									<th scope="col"></th>
+									<th id="Hetfo1" scope="col">Hétfő</th>
+									<th id="Kedd1" scope="col">Kedd</th>
+									<th id="Szerda1" scope="col">Szerda</th>
+									<th id="Csutortok1" scope="col">Csütörtök</th>
+									<th id="Pentek1" scope="col">Péntek</th>
+									<th id="Szombat1" scope="col">Szombat</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Értékesítés</th>
+									<td id="Hetfo2"><span>08:00-17:00</span></td>
+									<td id="Kedd2"><span>08:00-17:00</span></td>
+									<td id="Szerda2"><span>08:00-17:00</span></td>
+									<td id="Csutortok2"><span>08:00-17:00</span></td>
+									<td id="Pentek2"><span>08:00-17:00</span></td>
+									<td id="Szombat2"><span>09:00-12:00</span></td>
+								</tr>
+								<tr>
+									<th scope="row">Szervíz</th>
+									<td id="Hetfo3"><span>08:00-17:00</span></td>
+									<td id="Kedd3"><span>08:00-17:00</span></td>
+									<td id="Szerda3"><span>08:00-17:00</span></td>
+									<td id="Csutortok3"><span>08:00-17:00</span></td>
+									<td id="Pentek3"><span>08:00-17:00</span></td>
+									<td id="Szombat3"><span>-</span></td>
+								</tr>
+								<tr>
+									<th scope="row">Információ</th>
+									<td id="Hetfo4"><span>08:00-17:00</span></td>
+									<td id="Kedd4"><span>08:00-17:00</span></td>
+									<td id="Szerda4"><span>08:00-17:00</span></td>
+									<td id="Csutortok4"><span>08:00-17:00</span></td>
+									<td id="Pentek4"><span>08:00-17:00</span></td>
+									<td id="Szombat4"><span>-</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h5 class="font-weight-light text-center py-3">Nyitvatartási időn kívül 0-24h információ</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm text-center"><a href="mailto:surgos@fokszauto.hu" style="color:#85cc21!important"><i class="fa fa-envelope" aria-hidden="true"></i>surgos@fokszauto.hu</a></div>
+							<div class="col-sm text-center"><a href="tel:+368884444" style="color:#85cc21!important"><i class="fa fa-phone" aria-hidden="true"></i> +368884444</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Opening Hours-->
+
 	<!-- Start google maps
 	<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pannon%20egyetem&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
 	End google maps-->
@@ -250,6 +312,8 @@
 	<script src="js/popper.min.js"></script>
 	<!-- Font Awesome -->
 	<script src="js/all.min.js"></script>
+	<!-- David -->
+	<script src="js/david.js"></script>
 
 	<!-- End Script Source Files -->
 </body>
