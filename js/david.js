@@ -70,3 +70,14 @@ function dayHighlight(){
             break;
     }
 }
+
+//form check, checkboxPriv is checked
+function checkForm(form)
+{
+  if(!form.checkboxPriv.checked) {
+    alert("Elküldéshez az adatvédelmi nyilatkozatot el kell fogadnia.");
+    form.checkboxPriv.focus();
+    return false;
+  }
+  return true;
+}

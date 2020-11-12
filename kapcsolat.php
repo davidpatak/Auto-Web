@@ -1,3 +1,4 @@
+<?php include 'php/contactform.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
 					<li class="nav-item"><a href="hasznaltauto.html" class="nav-link">Használt Autók</a></li>
 					<li class="nav-item"><a href="szerviz.html" class="nav-link">Szervíz</a></li>
 					<li class="nav-item"><a href="karrier.html" class="nav-link">Karrier</a></li>
-					<li class="nav-item"><a href="kapcsolat.html" class="nav-link">Kapcsolat</a></li>
+					<li class="nav-item"><a href="kapcsolat.php" class="nav-link">Kapcsolat</a></li>
 				</ul>
 
 			</div>
@@ -91,23 +92,27 @@
 						</div>
 						<!-- Main Form-->
 						<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-							<form class="contact-form" action="php/contactform.php" method="post">
+											<!-- Fail / Success MSG onsend -->
+											<?php if($msg != ''): ?>
+											<div class="alert <?php echo $msgClass; ?>"><?php echo $msg;?></div>
+											<?php endif; ?>
+							<form class="contact-form" action="kapcsolat.php" onsubmit="return checkForm(this);" method="post">
 								<label>Hogyan szólíthatjuk?</label>
 								<div class="form-row">									
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="text" name="vezNev" class="form-control" placeholder="Vezetéknév" required>
+										<input type="text" name="vezNev" class="form-control" placeholder="Vezetéknév" required value="<?php echo isset($_POST['vezNev']) ? $vezNev : ''; ?>">
 									</div>
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="text" name="kerNev" class="form-control" placeholder="Keresztnév" required>
+										<input type="text" name="kerNev" class="form-control" placeholder="Keresztnév" required value="<?php echo isset($_POST['kerNev']) ? $kerNev : ''; ?>">
 									</div>
 								</div>
 								<label>Ön elérhetőségei (e-mail és telefonszám)?</label>
 								<div class="form-row">
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="Email" name="mail" class="form-control" placeholder="pelda@pelda.hu" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+										<input type="text" name="mail" class="form-control" placeholder="pelda@pelda.hu" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required value="<?php echo isset($_POST['mail']) ? $mail : ''; ?>">
 									</div>
 									<div class="form-group col-lg-6 col-md12 col-sm-12 col-12">
-										<input type="tel" name="tel" class="form-control" placeholder="Tel.: +36-821-8482" pattern="\++[0-9]{2,3}-[0-9]{3}-[0-9]{4,}" title="+36-821-8482" required>
+										<input type="tel" name="tel" class="form-control" placeholder="Tel.: +36-821-8482" pattern="\++[0-9]{2,3}-[0-9]{3}-[0-9]{4,}" title="+36-821-8482" required value="<?php echo isset($_POST['tel']) ? $tel : ''; ?>">
 									</div>
 								</div>
 								<div class="form-group">
@@ -124,9 +129,9 @@
 									</select>
 								</div>
 								<label>Az ön üzenete számunkra</label>
-								<textarea type="text" name="msgMain" class="form-control mb-3" cols="10" rows="5" id="comment" placeholder="..." required></textarea>
+								<textarea type="text" name="msgMain" class="form-control mb-3" cols="10" rows="5" id="comment" placeholder="..." required value="<?php echo isset($_POST['msgMain']) ? $msgMain : ''; ?>"></textarea>
 									<div class="checkbox">
-										<label style="font-size:0.7rem"><input type="checkbox"> Hozzájárulok ahhoz, hogy az általam megadott személyes és nem személyes adatok a FOKSZ-AUTO az <a data-toggle="modal" data-target=".privacyNotice" href="#privacyNotice" style="color:#73b21c">Adatvédelemi nyilatkozatunk</a> alapján automatikusan feldolgozásra kerülhetnek. Az adatok kizárólag a kérdések megválaszolása céljából kerülnek mentésre és harmadik félnek nem adjuk át.</label>
+										<label style="font-size:0.7rem"><input type="checkbox" required name="checkboxPriv"> Hozzájárulok ahhoz, hogy az általam megadott személyes és nem személyes adatok a FOKSZ-AUTO az <a data-toggle="modal" data-target=".privacyNotice" href="#privacyNotice" style="color:#73b21c">Adatvédelemi nyilatkozatunk</a> alapján automatikusan feldolgozásra kerülhetnek. Az adatok kizárólag a kérdések megválaszolása céljából kerülnek mentésre és harmadik félnek nem adjuk át.</label>
 										<div class="modal fade privacyNotice" tabindex="-1" role="dialog" aria-labelledby="privacyNoticeLabel" aria-hidden="true">
 											<div class="modal-dialog modal-lg">
 											  <div class="modal-content">
