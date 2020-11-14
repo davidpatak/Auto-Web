@@ -1,10 +1,10 @@
 <!-- HEADER + NAVBAR -->
 <?php
-	include_once '../php/header_admin.php'
+	include_once '../php/david/header_admin.php'
 ?>
 	<!-- Login Form -->
 	<div class="container pt-5">
-		<form>
+		<form action="../php/david/login.inc.php" method="post">
 		<div class="form-group">
 		  <label>Felhasználónév</label>
 		  <input type="text" class="form-control" aria-describedby="userName" placeholder="Felhasználónév...">
@@ -28,5 +28,5 @@
 
 <!-- FOOTER & SCRIPTS -->
 <?php
-	include_once '../php/footer_admin.php'
+	include_once '../php/david/footer_admin.php'
 ?>

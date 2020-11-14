@@ -10,7 +10,7 @@
 	<!-- Bootstrap 4.5 CSS -->
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<!-- Style CSS -->
-	<link rel="stylesheet" href="../css/david_admin_style.css">
+	<link rel="stylesheet" href="../css/david/admin_style.css">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>

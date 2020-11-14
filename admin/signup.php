@@ -1,10 +1,10 @@
 <!-- HEADER + NAVBAR -->
 <?php
-	include_once '../php/header_admin.php'
+	include_once '../php/david/header_admin.php'
 ?>
 	<!-- Signup Form -->
 	<div class="container pt-5">
-		<form action="signup.inc.php" method="post">
+		<form action="../php/david/signup.inc.php" method="post">
             <div class="form-group">
                 <input type="text" name="name" class="form-control" aria-describedby="userName" placeholder="Teljes neve...">
             </div>
@@ -30,5 +30,5 @@
 
 <!-- FOOTER & SCRIPTS -->
 <?php
-	include_once '../php/footer_admin.php'
+	include_once '../php/david/footer_admin.php'
 ?>
