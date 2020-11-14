@@ -1,4 +1,5 @@
 <?php
+//David Kapcsolatok menu funkcionalitas feladatresz
     //Message Variables
     $msg='';
     $msgClass = '';
