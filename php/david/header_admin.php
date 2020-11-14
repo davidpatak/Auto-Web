@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <!-- David -->
 <html lang="en">
@@ -38,8 +42,15 @@
 			<!-- Navigation Bar List -->
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="login.php" class="nav-link active">Belépés</a></li>
-					<li class="nav-item"><a href="signup.php" class="nav-link active">Regisztráció</a></li>
+				<?php
+					if(isset($_SESSION["useruid"])){
+						echo "<li class=\"nav-item\"><a href=\"../php/david/logout.inc.php\" class=\"nav-link active\">Kilépés</a></li>";
+						echo "<li class=\"nav-item\"><a href=\"signup.php\" class=\"nav-link active\">Új Felhasználó</a></li>";
+					}
+					else {
+						echo "<li class=\"nav-item\"><a href=\"login.php\" class=\"nav-link active\">Belépés</a></li>";
+					}
+				?>										
 					<li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
 					<li class="nav-item"><a href="ujauto.html" class="nav-link">Új</a></li>
 					<li class="nav-item"><a href="hasznaltauto.html" class="nav-link">Használt</a></li>
