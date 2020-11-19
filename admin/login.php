@@ -24,6 +24,9 @@
                     }
                     else if($_GET["error"] == "none") {
                         echo "<div class=\"alert-success\"> Sikeres bejelentkezés!</div>";
+					}
+					else if($_GET["error"] == "invalidaccess") {
+                        echo "<div class=\"alert-danger\"> Jelentkezzen be mielőtt tovább haladna!</div>";
                     }
                 }
             ?><br>

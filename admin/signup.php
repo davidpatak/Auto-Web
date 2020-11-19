@@ -2,6 +2,11 @@
 <?php
 	include_once '../php/david/header_admin.php'
 ?>
+<?php
+	if(!isset($_SESSION["useruid"])){
+		header("Location: login.php?error=invalidaccess");
+	}
+?>
 	<!-- Signup Form -->
 	<div class="container pt-5">
 		<form action="../php/david/signup.inc.php" method="post">

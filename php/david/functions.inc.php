@@ -119,3 +119,18 @@ function loginUser($conn, $username, $pwd){
         exit();
     }
 }
+//Contact Data Insert into database entry
+function contactSend($conn, $vezNev, $kerNev, $mail , $tel, $selectPrimary, $msgMain){ 
+    $sql = "INSERT INTO felker (vezNev, kerNev, felhEmail, felhTel, kerTipus, kerUzenet) VALUES (?, ?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);                            
+    if (!mysqli_stmt_prepare($stmt, $sql)){                    
+        header("location: kapcsolat.php?error=stmtfailed");
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssssss", $vezNev, $kerNev, $mail , $tel, $selectPrimary, $msgMain);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header("location: kapcsolat.php?error=none");
+    exit();
+}

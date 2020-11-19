@@ -46,18 +46,19 @@
 					if(isset($_SESSION["useruid"])){
 						echo "<li class=\"nav-item\"><a href=\"../php/david/logout.inc.php\" class=\"nav-link active\">Kilépés</a></li>";
 						echo "<li class=\"nav-item\"><a href=\"signup.php\" class=\"nav-link active\">Új Felhasználó</a></li>";
+						echo "<li class=\"nav-item\"><a href=\"kapcsolat.php\" class=\"nav-link active\">Ügyfélkezelés</a></li>";
 					}
 					else {
 						echo "<li class=\"nav-item\"><a href=\"login.php\" class=\"nav-link active\">Belépés</a></li>";
 					}
 				?>										
-					<li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
+					<!--<li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
 					<li class="nav-item"><a href="ujauto.html" class="nav-link">Új</a></li>
 					<li class="nav-item"><a href="hasznaltauto.html" class="nav-link">Használt</a></li>
 					<li class="nav-item"><a href="szerviz.html" class="nav-link">Szervíz</a></li>
 					<li class="nav-item"><a href="karrier.html" class="nav-link">Karrier</a></li>
 					<li class="nav-item"><a href="kapcsolat.php" class="nav-link">Kapcsolat</a></li>
-				</ul>
+				--></ul>
 			</div>
 
 		</div>

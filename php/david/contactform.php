@@ -25,9 +25,9 @@
                 $msgClass = 'alert-danger';
             }else{
                 //EMAIL PASSED
-                
-                //Sending the Email
-                $toEmail ='davkaroly@gmail.com';
+                /*
+                //Sending the Email, (Csak szerveren, tesztelve, működik)
+                $toEmail ='################@gmail.com';     //Placeholder
                 $subject = 'Üzenet érkezett '.$teljesNev.' részéről!'; 
                 $body = '<h2>Kapcsolat Felvétel</h2>
                         <h4>Név<h4><p>'.$teljesNev.'</p>
@@ -44,12 +44,22 @@
                     if(mail($toEmail, $subject, $body, $headers)){
                         //Email sent
                         $msg = 'Sikeresen elküldve';
-                        $msgClass = 'alert-success';;
+                        $msgClass = 'alert-success';
                     } else {
                         //Email Failed To Send
                         $msg = 'Email elküldése sikertelen volt!';
                         $msgClass = 'alert-danger';
-                    }
+                    }*/
+
+                    //Database Write
+                    require_once 'php/david/dbh.inc.php'; //Database connection
+                    require_once 'php/david/functions.inc.php'; //Insert functions contactSend();
+                    
+                    contactSend($conn, $vezNev, $kerNev, $mail , $tel, $selectPrimary, $msgMain);
+
+                    $msg = 'Sikeresen elküldve';
+                    $msgClass = 'alert-success';
+
             } 
         }else{
             //Failed

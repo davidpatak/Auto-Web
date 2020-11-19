@@ -92,10 +92,20 @@
 						</div>
 						<!-- Main Form-->
 						<div class="col-lg-6 col-md-12 col-sm-12 col-12">
-											<!-- Fail / Success MSG onsend -->
+											<!-- Fail / Success MSG EMAIL -->
 											<?php if($msg != ''): ?>
 											<div class="alert <?php echo $msgClass; ?>"><?php echo $msg;?></div>
 											<?php endif; ?>
+											<!-- Fail / Success MSG database -->
+											<?php 
+											if(isset($_GET["error"])) {
+												if($_GET["error"] == "none"){
+													echo "<br><div id=\"uzenet\" class=\"alert-success\"> Üzenetét megkaptuk, mihamarabb felvesszük önnel a kapcsolatot!</div><br>";
+												}
+												else if($_GET["error"] == "stmtfailed") {
+													echo "<br><div id=\"uzenet\" class=\"alert-danger\"> Valamilyen hiba történt! Próbálkozzon újra!</div><br>";
+												}}					
+											?>
 							<form class="contact-form" action="kapcsolat.php" onsubmit="return checkForm(this);" method="post">
 								<label>Hogyan szólíthatjuk?</label>
 								<div class="form-row">									
