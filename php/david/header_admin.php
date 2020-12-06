@@ -46,7 +46,8 @@
 					if(isset($_SESSION["useruid"])){
 						echo "<li class=\"nav-item\"><a href=\"../php/david/logout.inc.php\" class=\"nav-link active\">Kilépés</a></li>";
 						echo "<li class=\"nav-item\"><a href=\"signup.php\" class=\"nav-link active\">Új Felhasználó</a></li>";
-						echo "<li class=\"nav-item\"><a href=\"kapcsolat.php\" class=\"nav-link active\">Ügyfélkezelés</a></li>";
+						echo "<li class=\"nav-item\"><a href=\"karrier.php\" class=\"nav-link active\">Hírdetés</a></li>";
+						echo "<li class=\"nav-item\"><a href=\"kapcsolat.php\" class=\"nav-link active\">Ügyfél üzenetek</a></li>";
 					}
 					else {
 						echo "<li class=\"nav-item\"><a href=\"login.php\" class=\"nav-link active\">Belépés</a></li>";

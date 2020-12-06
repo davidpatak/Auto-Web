@@ -27,7 +27,7 @@
 			echo "<div class=\"card-header\" id=\"heading".$row['felkerId']."\">";
 			echo '<h5 class="mb-0">';
 			echo "<button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse".$row['felkerId']."\" aria-expanded=\"true\" aria-controls=\"collapse".$row['felkerId']."\">";
-			echo $row['kerTipus'];
+			echo "ID#".$row['felkerId']." - ".$row['kerTipus'];
 			echo '</button>';
 			echo '</h5>';
 			echo '</div>';

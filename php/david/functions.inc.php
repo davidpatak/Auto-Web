@@ -134,3 +134,19 @@ function contactSend($conn, $vezNev, $kerNev, $mail , $tel, $selectPrimary, $msg
     header("location: kapcsolat.php?error=none");
     exit();
 }
+
+//KARRIER Data Insert into database
+function karrierSend($conn, $datum, $felNev, $felTel , $selectLogo, $munkaNev, $msgRovid, $msgKinal, $msgElvar, $msgTapasz, $nyelv, $helyszin){ 
+    $sql = "INSERT INTO karrierdb (datum, felNev, felTel , selectLogo, munkaNev, msgRovid, msgKinal, msgElvar, msgTapasz, nyelv, helyszin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);                            
+    if (!mysqli_stmt_prepare($stmt, $sql)){                    
+        header("location: karrier.php?error=stmtfailed");
+    }
+
+    mysqli_stmt_bind_param($stmt, "sssssssssss", $datum, $felNev, $felTel , $selectLogo, $munkaNev, $msgRovid, $msgKinal, $msgElvar, $msgTapasz, $nyelv, $helyszin);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header("location: karrier.php?error=none");
+    exit();
+}

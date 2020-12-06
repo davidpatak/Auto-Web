@@ -30,11 +30,11 @@
                 $toEmail ='################@gmail.com';     //Placeholder
                 $subject = 'Üzenet érkezett '.$teljesNev.' részéről!'; 
                 $body = '<h2>Kapcsolat Felvétel</h2>
-                        <h4>Név<h4><p>'.$teljesNev.'</p>
-                        <h4>email<h4><p>'.$mail.'</p>
-                        <h4>Telefonszám<h4><p>'.$tel.'</p>
-                        <h4>Tárgy<h4><p>'.$selectPrimary.'</p>
-                        <h4>Név<h4><p>'.$msgMain.'</p>
+                        <h4>Név</h4><p>'.$teljesNev.'</p>
+                        <h4>email</h4><p>'.$mail.'</p>
+                        <h4>Telefonszám</h4><p>'.$tel.'</p>
+                        <h4>Tárgy</h4><p>'.$selectPrimary.'</p>
+                        <h4>Név</h4><p>'.$msgMain.'</p>
                         ';
                     //Email Headers
                     $headers = "MIME-Version: 1.0" ."\r\n";
