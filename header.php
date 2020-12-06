@@ -28,7 +28,7 @@
 	<!-- Navigation -->
 	<nav class="navbar bg-light navbar-light navbar-expand-lg">
 		<div class="container">
-			<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="FOKSZ-AUTO KFT." title="FOKSZ-AUTO"></a>
+			<a href="index.php" class="navbar-brand"><img src="img/logo.png" alt="FOKSZ-AUTO KFT." title="FOKSZ-AUTO"></a>
 
 			<!-- Hamburger Menu Button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -37,10 +37,10 @@
 			<!-- Navigation Bar List -->
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="index.html" class="nav-link active">Kezdőlap</a></li>
+					<li class="nav-item"><a href="index.php" class="nav-link active">Kezdőlap</a></li>
 					<li class="nav-item"><a href="hirek.html" class="nav-link">Hírek</a></li>
 					<li class="nav-item"><a href="ujauto.html" class="nav-link">Új Autók</a></li>
-					<li class="nav-item"><a href="hasznaltauto.html" class="nav-link">Használt Autók</a></li>
+					<li class="nav-item"><a href="hasznaltauto.php" class="nav-link">Használt Autók</a></li>
 					<li class="nav-item"><a href="szerviz.html" class="nav-link">Szervíz</a></li>
 					<li class="nav-item"><a href="karrier.php" class="nav-link">Karrier</a></li>
 					<li class="nav-item"><a href="kapcsolat.php" class="nav-link">Kapcsolat</a></li>
@@ -51,33 +51,3 @@
 		</div>
 	</nav>
 	<!-- End Navigation -->
-
-
-
-
-
-
-	<!--Start Footer-->
-	<footer></footer>
-	<!-- End Footer-->
-	
-    <!-- Start Socket -->
-	<div class="socket text-light text-center py-3">
-		<p>&copy; <a href="www.fokszautokft.hu" target="_blank">fokszautokft.hu</a></p>
-	</div>
-    <!-- End Socket -->
-    
-	<!-- Script Source Files -->
-
-	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
-	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
-	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
-
-	<!-- End Script Source Files -->
-</body>
-</html>
